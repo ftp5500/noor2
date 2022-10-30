@@ -1,0 +1,39 @@
+{
+  "name": "Noor",
+  "description": "Fill noor system with marks",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "js/background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://*.noor.moe.gov.sa/*"],
+      "js": ["js/content.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/icons/rasid128.png",
+        "assets/icons/rasid128.png",
+        "assets/icons/rasid128.png",
+        "assets/icons/rasid128.png"
+      ],
+      "matches": ["https://*.noor.moe.gov.sa/*"]
+    }
+  ],
+ "action": {
+   "default_icon": {
+     "16": "assets/icons/rasid128.png",
+     "32": "assets/icons/rasid128.png",
+     "48": "assets/icons/rasid128.png",
+     "128":"assets/icons/rasid128.png"
+   },
+   "default_title": "Noor Fill",
+   "default_popup": "view/popup.html"
+ }
+
+}
