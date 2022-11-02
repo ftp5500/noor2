@@ -13,6 +13,10 @@
       "js": ["js/content.js"]
     }
   ],
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
 
   "web_accessible_resources": [
     {
