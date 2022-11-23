@@ -1,16 +1,14 @@
-// chrome.runtime.onMessage.addListener(message)
+// chrome.runtime.onMessage.addListener(receiver);
+var columns = ""
 //
-// function message(request) {
-//     chrome.runtime.sendMessage({
-//         msg: "something_completed",
-//         columns: request.columns,
-//     });
+// //  Send columns length to popup.js
+// function receiver( request ) {
+//     columns = request.columns
+//     chrome.tabs.sendMessage(sender.tab.id , columns)
 //
 // }
-//
 
-chrome.runtime.onMessage.addListener(getColumns)
-
-function getColumns( request ) {
-    chrome.storage.local.set({["cols"]: request.columns});
-}
+chrome.runtime.onMessage.addListener((request , sender , sendResponse) => {
+    chrome.storage.local.set({"columns": request.columns}, () => {
+    })
+})

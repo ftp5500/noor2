@@ -1,18 +1,90 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="/css/style.css">
-	<title>Rasid Noor</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/style.css">
+	<link href="../css/tailwind.css" rel="stylesheet">
+	<script src="../js/jquery.js"></script>
+	<script src=../js/autosize.js></script>
+	
+	
+	<title>راصد نور </title>
+
 </head>
 <body>
-<div class="container">
-	<div class="columns-title">Columns length: <span id="element"></span></div>
-</div>
 
-<script src="/js/popup.js"></script>
+
+<!--header  ======================================-->
+<div class="bg-gray-700 h-full">
+	<div class="bg-gray-800 py-2 px-3 flex justify-between items-center shadow-lg">
+		<!--    left side -->
+		<div>
+			<img src="../assets/icons/rasid128.png" width="30" alt="راصد نور">
+		</div>
+		
+		<!--Right Side -->
+		<div class="text-gray-200 hover:text-white">
+			<a class="" href="mailto:rasidnooor@gmail.com">راصد نور</a>
+		</div>
+	</div>
+	<!--Radio buttons  ======================================-->
+	<div
+			class="bg-gray-700 flex justify-between items-stretch shadow-lg p-4 text-gray-100 border-b border-gray-500">
+		
+		<div class="btn-group grid grid-cols-2 justify-center align-top"></div>
+		
+		
+		<div>
+			<h5 id="signal"> عمود الدرجات </h5>
+		</div>
+	
+	</div>
+	
+	<!-- All Content ======================================-->
+	<div class="all-content mt-1 " hidden>
+		<div>
+			<p id="count" hidden></p>
+		</div>
+		<!--One Value input  ======================================-->
+		<div class="bg-gray-700 flex justify-between items-center shadow-lg p-3 text-gray-100">
+			
+			<div>
+				<button
+						class="one-value-button btn rounded py-1 px-5 bg-green-600 hover:bg-green-400 text-white focus:outline-none"
+						type="button">
+					رصد
+				</button>
+			</div>
+			
+			<div class="flex w-3/4">
+				
+				<input placeholder="درجة موحدة لجميع الحقول"
+				       class="one-value-input  shadow appearance-none border w-full  rounded  py-1 px-1 text-gray-700  focus:outline-none focus:shadow-outline">
+			</div>
+		
+		</div>
+		
+		<!--Text Area  ======================================-->
+		<div class="bg-gray-700 flex justify-between text-area  justify-top shadow-lg p-3 text-gray-100 ">
+			<div>
+				<button id="rasid"
+				        class="btn rounded py-4 px-5 bg-green-600 hover:bg-green-400 text-white focus:outline-none">
+					رصد
+				</button>
+			</div>
+			
+			<div >
+                <textarea type="text" class="bg-gray-100 text-black userInput  rounded p-1 " cols="30"
+                          placeholder="قم بلصق الدرجات" rows="8"></textarea>
+			</div>
+		</div>
+	
+	</div>
+
+
+</div>
+<script src="../js/popup.js"></script>
 </body>
 </html>
