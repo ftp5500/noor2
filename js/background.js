@@ -1,5 +1,3 @@
-// chrome.runtime.onMessage.addListener(receiver);
-var columns = ""
 //
 // //  Send columns length to popup.js
 // function receiver( request ) {
@@ -8,7 +6,13 @@ var columns = ""
 //
 // }
 
-chrome.runtime.onMessage.addListener((request , sender , sendResponse) => {
-    chrome.storage.local.set({"columns": request.columns}, () => {
-    })
-})
+    var columns = ""
+ 
+
+    
+        chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+            chrome.storage.session.set({
+                "columns": request.columns
+            }, () => {})
+        })
+ 

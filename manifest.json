@@ -11,6 +11,7 @@
     {
       "matches": ["https://*.noor.moe.gov.sa/*"],
       "js": ["js/content.js",  "js/jquery.js"]
+
     }
   ],
   "permissions": [

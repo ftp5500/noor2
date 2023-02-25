@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300&display=swap');
 
-html{
 
-}
 *{
     margin: 0;
     padding: 0;
@@ -33,4 +31,17 @@ textarea::placeholder{
 
 .one-value-input::placeholder{
     text-align: right;
+}
+
+.line{
+
+    background-color:grey;
+    height: 0.5px;
+    width:50%;
+}
+.fill-by-columns-title{
+
+    color:lightgray;
+    font-size: 0.5rem;
+    white-space: nowrap;
 }
