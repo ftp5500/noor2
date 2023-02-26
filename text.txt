@@ -1,0 +1,16 @@
+//  Fill all inputs with all max value
+for (let i = 0; i < all_tables.length; i++) {
+    let rows =  all_tables[i].rows
+    for (let j = 0; j < rows.length; j++) {
+        if(rows[j].querySelectorAll("th").length <= 0 && rows[j].querySelectorAll("input[type=text]").length > 0){
+            let totalColumns = rows[j].querySelectorAll("input[type=text]").length
+            let columnPerRow = rows[j].querySelectorAll("input[type=text]")
+            for (let k = 0; k < columnPerRow.length; k++) {
+
+               columnPerRow[k].value = columnPerRow[k].max
+                console.log(columnPerRow[k].value);
+            }
+
+        }
+    }
+}

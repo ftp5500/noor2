@@ -6,13 +6,13 @@
 //
 // }
 
+chrome.runtime.onMessage.addListener(( request, sender, sendResponse ) => {
     var columns = ""
- 
 
-    
-        chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-            chrome.storage.session.set({
-                "columns": request.columns
-            }, () => {})
-        })
- 
+
+    chrome.storage.session.set({
+        "columns": request.columns
+    })
+
+})
+
