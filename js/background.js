@@ -8,8 +8,6 @@
 
 chrome.runtime.onMessage.addListener(( request, sender, sendResponse ) => {
     var columns = ""
-
-
     chrome.storage.session.set({
         "columns": request.columns
     })
