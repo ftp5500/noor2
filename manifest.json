@@ -1,5 +1,5 @@
 {
-  "name": "Noor",
+  "name": "راصد نور",
   "description": "Fill noor system with marks",
   "version": "1.0.0",
   "manifest_version": 3,
@@ -34,12 +34,16 @@
  "action": {
    "default_icon": {
      "16": "assets/icons/rasid128.png",
-     "32": "assets/icons/rasid128.png",
      "48": "assets/icons/rasid128.png",
      "128":"assets/icons/rasid128.png"
    },
-   "default_title": "Noor Fill",
+   "default_title": "رصد الدرجات",
    "default_popup": "view/popup.html"
- }
+ },
+  "icons": {
+    "16": "assets/icons/rasid128.png",
+    "48": "assets/icons/rasid128.png",
+    "128":"assets/icons/rasid128.png"
+  }
 
 }

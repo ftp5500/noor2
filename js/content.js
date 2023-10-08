@@ -54,6 +54,9 @@ try {
         // fill all inputs with max value
         fillMaxValue()
 
+        // erase all inputs
+        eraseAllValue()
+
         //  First choice the column
         function choiceColumn() {
 
@@ -71,7 +74,6 @@ try {
 
         // Then fill by columns
         function fillInputs() {
-
             let marks = message.the_value
             /*Table Rows*/
             for (var i = 1; i < tableRows.length; i++) {
@@ -124,6 +126,27 @@ try {
             }
 
 
+        }
+
+        // Erase all value
+        function eraseAllValue() {
+            if (message.txt === "erase_all") {
+                const tables = document.querySelectorAll("table")
+                for (let table of tables) {
+                    if (table.rows.length > 1) {
+                        for (let i = 0; i < table.rows.length; i++) {
+                            if (table.rows[ i ].querySelectorAll("th").length <= 0) {
+                                let columns = table.rows[ i ].querySelectorAll("td input[type=text]")
+                                for (let j = 0; j < columns.length; j++) {
+                                    columns[ j ].value = ""
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+            }
         }
 
     }

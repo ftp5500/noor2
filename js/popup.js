@@ -18,6 +18,7 @@ chrome.storage.session.get(['columns'], (result) => {
     var oneValueButton = document.querySelector('.one-value-button');
     var oneValueInput = document.querySelector('.one-value-input');
     var maxValueBtn = document.querySelector('.max-value-btn');
+    var eraseAll = document.querySelector('.erase-all');
     autosize(document.querySelector('textarea'));
     try {
         if (totalColumns > 0) {
@@ -33,10 +34,22 @@ chrome.storage.session.get(['columns'], (result) => {
                     chrome.tabs.sendMessage(tabs[0].id, msg)
                 })
             })
+
+            eraseAll.addEventListener("click", () => {
+                chrome.tabs.query(params, (tabs) => {
+                    let msg = {
+                        txt: "erase_all",
+                        colsNumber: p.innerHTML,
+
+
+                    }
+                    chrome.tabs.sendMessage(tabs[0].id, msg)
+                })
+            })
             for (var i = 0; i < totalColumns; i++) {
                 var radioButton = document.createElement("input");
                 radioButton.setAttribute("type", "radio")
-                radioButton.className = "checked:bg-yellow-300 checked:border-transparent px-1 text-right"
+                radioButton.className = "checked:bg-yellow-300 m-1 checked:border-transparent px-1 text-right"
                 radioButton.setAttribute("name", "btnradio")
                 radioButton.setAttribute("value", i)
                 radioButton.id = `radio${i}`
