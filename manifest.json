@@ -1,7 +1,7 @@
 {
   "name": "راصد نور",
   "description": "Fill noor system with marks",
-  "version": "4,0",
+  "version": "4.0.0",
   "manifest_version": 3,
   "background": {
     "service_worker": "js/background.js"
