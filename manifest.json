@@ -1,7 +1,7 @@
 {
   "name": "راصد نور",
-  "description": "Fill noor system with marks",
-  "version": "4.0.0",
+  "description": "اداة رصد الدرجات في نظام نور",
+  "version": "4.0.1",
   "manifest_version": 3,
   "background": {
     "service_worker": "js/background.js"
@@ -15,8 +15,7 @@
     }
   ],
   "permissions": [
-    "storage",
-    "tabs"
+    "storage"
 
   ],
 
